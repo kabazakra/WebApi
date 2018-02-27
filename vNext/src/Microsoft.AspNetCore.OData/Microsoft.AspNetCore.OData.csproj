@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.AspNetCore.OData</AssemblyName>
     <PackageId>Microsoft.AspNetCore.OData</PackageId>
     <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <Version>2.1.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

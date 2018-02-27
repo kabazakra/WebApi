@@ -27,7 +27,7 @@ namespace Microsoft.AspNetCore.OData.Query
         /// </summary>
         /// <param name="context">The <see cref="ODataQueryContext"/> which contains the <see cref="IEdmModel"/> and some type information.</param>
         /// <param name="request">The incoming request message.</param>
-        public ODataQueryOptions(ODataQueryContext context, HttpRequest request)
+        public ODataQueryOptions(ODataQueryContext context, HttpRequest request, bool enableCaseInsensitive=true)
         {
             if (context == null)
             {
@@ -52,6 +52,8 @@ namespace Microsoft.AspNetCore.OData.Query
                 context.ElementType,
                 context.NavigationSource,
                 queryOptionDict);
+
+            _queryOptionParser.Resolver.EnableCaseInsensitive = enableCaseInsensitive;
 
             var serviceProvider = request.HttpContext.RequestServices;
 
