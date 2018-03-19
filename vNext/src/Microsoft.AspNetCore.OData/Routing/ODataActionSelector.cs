@@ -32,7 +32,7 @@ namespace Microsoft.AspNetCore.OData.Routing
         /// <param name="actionConstraintProviders"></param>
         /// <param name="loggerFactory"></param>
         public ODataActionSelector(IServiceProvider serviceProvider,
-            IActionSelectorDecisionTreeProvider decisionTreeProvider,
+            IActionDescriptorCollectionProvider decisionTreeProvider,
             ActionConstraintCache actionConstraintProviders,
             ILoggerFactory loggerFactory)
         {
